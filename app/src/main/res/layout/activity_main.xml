@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="11sp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/main_barday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27"
+                android:layout_gravity="center"
+                android:textSize="19sp"
+                android:textColor="#000000">
+            </TextView>
+
+            <TextView
+                android:id="@+id/main_barmonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="十一月"
+                android:textSize="10sp"
+                android:textColor="#000000"
+                android:layout_gravity="center">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.1sp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#000000">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="9">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="    ">
+            </TextView>
+
+            <TextView
+                android:id="@+id/main_bartheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="22sp"
+                android:text="知乎日报"
+                android:textColor="#000000">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/btn_mainicon"
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:onClick="onClick"
+                    android:background="@drawable/icon2">
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="2sp">
+        </TextView>
+
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginTop="30dip">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/vp"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:layout_centerInParent="true">
+
+                    </androidx.viewpager.widget.ViewPager>
+
+                    <LinearLayout
+                        android:id="@+id/ll_tag"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dip">
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+                <!--            <com.example.newspaper_1.MyViewPager-->
+                <!--                android:id="@+id/looper_pager"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="350dp" />-->
+
+                <!--            <LinearLayout-->
+                <!--                android:id="@+id/points_container"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_alignParentBottom="true"-->
+                <!--                android:layout_marginBottom="40px"-->
+                <!--                android:gravity="center"-->
+                <!--                android:orientation="horizontal">-->
+
+                <!--                &lt;!&ndash;<View&ndash;&gt;-->
+                <!--                &lt;!&ndash;android:layout_width="40px"&ndash;&gt;-->
+                <!--                &lt;!&ndash;android:layout_height="40px"&ndash;&gt;-->
+                <!--                &lt;!&ndash;android:background="@drawable/shape_point_selected"/>&ndash;&gt;-->
+
+                <!--                &lt;!&ndash;<View&ndash;&gt;-->
+                <!--                &lt;!&ndash;android:layout_width="40px"&ndash;&gt;-->
+                <!--                &lt;!&ndash;android:layout_height="40px"&ndash;&gt;-->
+                <!--                &lt;!&ndash;android:layout_marginLeft="20px"&ndash;&gt;-->
+                <!--                &lt;!&ndash;android:background="@drawable/shape_point_normal"/>&ndash;&gt;-->
+
+                <!--            </LinearLayout>-->
+
+                <TextView
+                    android:id="@+id/ii"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:background="#FFFFFF">
+                </TextView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

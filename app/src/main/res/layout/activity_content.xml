@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContentActivity"
+    android:orientation="vertical">
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="16">
+    </WebView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_weight="0.1">
+
+        <ImageButton
+            android:id="@+id/content_back"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
+            android:background="@drawable/back2"
+            android:layout_marginTop="12dip"
+            android:layout_marginBottom="7dip"
+            android:layout_marginLeft="12dip">
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="3dp"
+            android:layout_height="25dp"
+            android:background="#000000"
+            android:layout_marginTop="12dip"
+            android:layout_toRightOf="@+id/content_back"
+            android:layout_marginLeft="10dip">
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/content_massage"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:background="@drawable/massage2"
+            android:layout_marginTop="12dip"
+            android:layout_toRightOf="@+id/tv_1"
+            android:layout_marginLeft="30dip">
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/content_massage_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/content_massage"
+            android:layout_marginTop="8dip"
+            android:layout_marginLeft="3dip"
+            android:text="12"
+            android:textSize="12sp"
+            android:textColor="#000000">
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/content_one"
+            android:layout_width="26dip"
+            android:layout_height="26dip"
+            android:background="@drawable/one3"
+            android:layout_marginTop="7dip"
+            android:layout_toRightOf="@+id/content_massage_num"
+            android:layout_marginLeft="70dip">
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/content_one_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/content_one"
+            android:layout_marginTop="8dip"
+            android:layout_marginLeft="3dip"
+            android:text="12"
+            android:textSize="12sp"
+            android:textColor="#000000">
+        </TextView>
+
+
+        <ImageButton
+            android:id="@+id/content_store"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:background="@drawable/store3"
+            android:layout_toRightOf="@+id/content_one"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="90dip">
+        </ImageButton>
+    </RelativeLayout>
+
+</LinearLayout>
